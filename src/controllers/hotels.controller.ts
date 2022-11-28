@@ -20,6 +20,9 @@ export async function getHotels(req: AuthenticatedRequest, res: Response) {
 
     return res.status(httpStatus.OK).send(hotels);
   } catch (error) {
+    if (error.name === "NotFoundError") {
+      return res.send(httpStatus.NO_CONTENT);
+    }
     return res.sendStatus(httpStatus.NO_CONTENT);
   }
 }

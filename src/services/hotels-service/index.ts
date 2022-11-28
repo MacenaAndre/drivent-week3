@@ -1,6 +1,4 @@
 import { notFoundError } from "@/errors";
-import ticketRepository from "@/repositories/ticket-repository";
-import enrollmentRepository from "@/repositories/enrollment-repository";
 import { Hotel } from "@prisma/client";
 import hotelRepository from "@/repositories/hotel-repository";
 
